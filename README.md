@@ -11,6 +11,7 @@ This repo is designed to look good to interviewers for a simple reason: it does 
 - reproducible experiment configs
 - benchmark-style episode metrics
 - clear hooks for Isaac Lab or MuJoCo Playground integration
+- exported benchmark artifacts and result tables
 
 ## Why this project
 
@@ -19,11 +20,16 @@ Quadruped locomotion is one of the most credible RL directions for robotics hiri
 ## What is inside
 
 - `configs/`: flat, rough, and stairs curriculum presets
+- `configs/isaac_lab/`: real training configs for Isaac Lab Go2 environments
 - `src/go2_terrain_curriculum/config.py`: experiment dataclasses and YAML loader
 - `src/go2_terrain_curriculum/curriculum.py`: terrain difficulty scheduler
+- `src/go2_terrain_curriculum/isaac_lab.py`: Isaac Lab training command renderer
 - `src/go2_terrain_curriculum/reward.py`: reusable locomotion reward decomposition
 - `src/go2_terrain_curriculum/metrics.py`: success, speed, and stability summaries
 - `scripts/simulate_curriculum.py`: local dry-run without a heavy simulator
+- `scripts/render_isaac_lab_commands.py`: print real training and evaluation commands
+- `scripts/generate_proxy_benchmark.py`: export a first benchmark report
+- `results/`: generated markdown and csv artifacts
 - `tests/`: fast tests for configs, rewards, and promotion logic
 
 ## Positioning
@@ -43,6 +49,8 @@ python -m pip install --upgrade pip
 python -m pip install -e .[dev]
 pytest
 python scripts/simulate_curriculum.py --config configs/go2_rough.yaml
+python scripts/render_isaac_lab_commands.py --config configs/isaac_lab/go2_rough_rsl_rl.yaml
+python scripts/generate_proxy_benchmark.py
 ```
 
 ## What makes this interview-friendly
@@ -59,7 +67,12 @@ python scripts/simulate_curriculum.py --config configs/go2_rough.yaml
 3. Add result tables for `flat -> rough -> stairs`.
 4. Track energy, slip, and command-tracking tradeoffs.
 
+## Current artifacts
+
+- `results/initial_proxy_benchmark.md`: first benchmark-style report generated locally
+- `results/proxy_benchmark.csv`: config-level score comparison
+- `results/isaac_lab_commands.txt`: ready-to-run Isaac Lab command snippets
+
 ## License
 
 MIT
-

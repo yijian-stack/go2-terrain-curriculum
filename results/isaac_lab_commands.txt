@@ -1,0 +1,4 @@
+# go2-rough-rsl-rl
+# Notes: Rough terrain velocity tracking baseline for Unitree Go2.
+isaaclab.bat -p scripts\reinforcement_learning\rsl_rl\train.py --task Isaac-Velocity-Rough-Unitree-Go2-v0 --headless --num_envs 4096 --max_iterations 2500 --seed 42 agent.experiment_name=go2_rough_curriculum
+isaaclab.bat -p scripts\reinforcement_learning\rsl_rl\play.py --task Isaac-Velocity-Rough-Unitree-Go2-v0 agent.experiment_name=go2_rough_curriculum

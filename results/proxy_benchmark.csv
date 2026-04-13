@@ -1,0 +1,4 @@
+config_name,success_rate,mean_time_to_goal,mean_velocity_error,benchmark_score
+go2-rough-curriculum,0.8499,14.300,0.1083,0.8511
+go2-stairs-curriculum,0.8310,16.033,0.1390,0.8064
+go2-flat-baseline,0.9625,11.400,0.0620,0.7773

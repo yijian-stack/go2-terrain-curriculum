@@ -1,0 +1,10 @@
+project_name: go2-rough-rsl-rl
+simulator: isaac_lab
+env_id: Isaac-Velocity-Rough-Unitree-Go2-v0
+backend: rsl_rl
+seed: 42
+num_envs: 4096
+max_iterations: 2500
+experiment_name: go2_rough_curriculum
+notes: Rough terrain velocity tracking baseline for Unitree Go2.
+
