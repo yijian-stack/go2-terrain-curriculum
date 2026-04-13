@@ -1,0 +1,15 @@
+name: go2-flat-baseline
+terrain_bands:
+  - name: flat
+    difficulty: 0.1
+    command_scale: 0.5
+reward_weights:
+  command_tracking: 1.0
+  upright: 0.8
+  foot_clearance: 0.2
+  torque_penalty: 0.05
+  slip_penalty: 0.2
+promotion_threshold: 0.85
+demotion_threshold: 0.3
+min_episodes_per_band: 8
+
