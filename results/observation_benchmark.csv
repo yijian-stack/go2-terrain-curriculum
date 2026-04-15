@@ -1,0 +1,5 @@
+name,modality,observability,terrain_precision,latency_tolerance,sim_to_real_readiness,compute_cost,benchmark_score
+pointcloud_bev,joint_state + pointcloud BEV raster,0.880,0.910,0.680,0.860,0.460,0.7737
+height_scan,joint_state + local height scan,0.760,0.740,0.820,0.780,0.340,0.7160
+raw_pointcloud,joint_state + raw pointcloud encoder,0.930,0.940,0.520,0.810,0.740,0.7083
+proprio_only,joint_state + imu,0.580,0.300,0.950,0.640,0.100,0.5656
